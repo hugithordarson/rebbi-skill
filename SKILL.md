@@ -64,6 +64,10 @@ Statuses, in lifecycle order: `Memo` (registered, untriaged) → `Backlog` (wait
 `NotStarted` (on the board) → `InProgress` → `Review` (done, awaiting acceptance) →
 `Done` (accepted) → `Released` (closed).
 
+An issue noted for later is registered as `Memo` — leave `status` out, which defaults to it.
+The UI calls it "New" / "Nýskráð". Triage (`Backlog`, `NotStarted`) is Hugi's; "for later"
+does not mean `Backlog`.
+
 Errors come back as `{"error": "…"}` with 400 (bad parameter), 401 (bad token) or
 404 (unknown issue or endpoint). Read the message — it names the problem.
 
